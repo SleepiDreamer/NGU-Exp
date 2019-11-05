@@ -18,9 +18,9 @@ if recpow != 0 and recbars != 0:
     print(f"You need to have {powerExp} more power, and {barsExp} more bars")
     print()
     print("EXP needed for full efficiency:")
-    print("power: " + str(math.ceil(powerExp * 150)) + " EXP")
-    print("bars: " + str(math.ceil(barsExp * 80)) + " EXP")
-    print("total: " + str(math.ceil(powerExp * 150 + barsExp * 80)) + " EXP")
+    print(f"power: {math.ceil(powerExp * 150)} EXP")
+    print(f"bars: {math.ceil(barsExp * 150)} EXP")
+    print(f"total: {math.ceil((powerExp * 150) + (barsExp * 80))} EXP")
 else:
     print("You are fully efficient!")
 
