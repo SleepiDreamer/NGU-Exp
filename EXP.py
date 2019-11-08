@@ -22,7 +22,7 @@ barsExp = round(recbars - bars, 1)
 
 
 if recpow - power != 0 and recbars - bars != 0:
-    if recpow - power >= 0 or recbars - bars <= 0:
+    if recpow - power >= 0 or recbars - bars >= 0:
         print()
         print(f"You need to have {powerExp} more power and {barsExp} more bars")
         print()
