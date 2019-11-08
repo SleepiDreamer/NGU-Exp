@@ -27,9 +27,9 @@ if powerExp != 0 and barsExp != 0:
         print(f"You need to have {powerExp} more power and {barsExp} more bars")
         print()
         print("EXP needed for full efficiency:")
-        print(f"power: {math.ceil(powerExp * 150)} EXP")
-        print(f"bars: {math.ceil(barsExp * 80)} EXP")
-        print(f"total: {math.ceil((powerExp * 150) + (barsExp * 80))} EXP")
+        print(f"\tpower: {math.ceil(powerExp * 150)} EXP")
+        print(f"\tbars: {math.ceil(barsExp * 80)} EXP")
+        print(f"\ttotal: {math.ceil((powerExp * 150) + (barsExp * 80))} EXP")
     else:
         if powerExp < barsExp:
             morecap = abs(powerExp * ratiocap)
