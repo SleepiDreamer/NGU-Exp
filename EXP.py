@@ -21,8 +21,8 @@ powerExp = round(recpow - power, 1)
 barsExp = round(recbars - bars, 1)
 
 
-if recpow - power != 0 and recbars - bars != 0:
-    if recpow - power >= 0 or recbars - bars >= 0:
+if powerExp != 0 and barsExp != 0:
+    if powerExp >= 0 or barsExp >= 0:
         print()
         print(f"You need to have {powerExp} more power and {barsExp} more bars")
         print()
@@ -32,13 +32,13 @@ if recpow - power != 0 and recbars - bars != 0:
         print(f"total: {math.ceil((powerExp * 150) + (barsExp * 80))} EXP")
     else:
         if powerExp < barsExp:
-            morecap = abs(powerExp * 150)
+            morecap = abs(powerExp * ratiocap)
         else:
-            morecap = abs(barsExp * 80)
+            morecap = abs(barsExp * ratiocap)
 
         print()
-        print(f"You need to have {abs(powerExp)} less power and {abs(barsExp)} less bars or {morecap}k more cap")
+        print(f"You should have {abs(powerExp)} less power and {abs(barsExp)} less bars which means you need {morecap}k more cap")
 else:
-    print("Go ahead and buy some more Energy Cap!")
+    print(f"Go ahead and buy {ratiocap} more Energy Cap!")
 
 input()
