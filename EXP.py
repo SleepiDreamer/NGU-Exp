@@ -22,7 +22,21 @@ barsExp = round(recbars - bars, 1)
 
 
 if powerExp != 0 and barsExp != 0:
-    if powerExp >= 0 or barsExp >= 0:
+    if powerExp < 0 or barsExp < 0:
+
+        if powerExp < barsExp:
+            morecap = abs(powerExp * ratiocap)
+        else:
+            morecap = abs(barsExp * ratiocap)
+
+        print()
+        if powerExp > 0:
+            print(f"You should have {abs(powerExp)} more power and {abs(barsExp)} less bars which means you need to buy power first and then {morecap}k more cap")
+        elif barsExp > 0:
+            print(f"You should have {abs(powerExp)} less power and {abs(barsExp)} more bars which means you need to buy bars first and then {morecap}k more cap")
+        else:
+            print(f"You should have {abs(powerExp)} less power and {abs(barsExp)} less bars which means you need {morecap}k more cap")
+    else:
         print()
         print(f"You need to have {powerExp} more power and {barsExp} more bars")
         print()
@@ -30,14 +44,7 @@ if powerExp != 0 and barsExp != 0:
         print(f"\tpower: {math.ceil(powerExp * 150)} EXP")
         print(f"\tbars: {math.ceil(barsExp * 80)} EXP")
         print(f"\ttotal: {math.ceil((powerExp * 150) + (barsExp * 80))} EXP")
-    else:
-        if powerExp < barsExp:
-            morecap = abs(powerExp * ratiocap)
-        else:
-            morecap = abs(barsExp * ratiocap)
 
-        print()
-        print(f"You should have {abs(powerExp)} less power and {abs(barsExp)} less bars which means you need {morecap}k more cap")
 else:
     print(f"Go ahead and buy {ratiocap} more Energy Cap!")
 
